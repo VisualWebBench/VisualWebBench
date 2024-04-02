@@ -1,0 +1,12 @@
+model_path: /ML-A800/models/Qwen-VL-Chat
+model_adapter: QwenVLAdapter
+temperature: 0.0
+
+element_ground_bbox_prompt: |+
+  In this UI screenshot, what is the position of the bounding box of html element with description: "{element_desc}"?
+webqa_prompt: |+
+  {question}
+  You should directly tell me your answer in the fewest words possible, and do not output any explanation or any other contents.
+action_ground_bbox_prompt: |+
+  Within the provided UI screenshot, please pinpoint the precise bounding box coordinates of the HTML element's region that I should click in order to complete the following task:
+  {instruction}

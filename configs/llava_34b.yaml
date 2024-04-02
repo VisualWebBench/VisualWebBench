@@ -1,0 +1,36 @@
+model_path: /ML-A100/public/run/research/yifansong/models/llava-v1.6-34b
+model_adapter: LlavaAdapter
+temperature: 0.0
+conv_mode: llava_v1
+
+meta_generate_prompt: |
+  You are given a screenshot of a webpage. Please generate the meta web description information of this webpage, i.e., content attribute in <meta name="description" content=""> HTML element.
+  
+  You should use this format, and do not output any explanation or any other contents:
+  <meta name="description" content="YOUR ANSWER">
+web_caption_prompt: |
+  You are given a screenshot of a webpage. Please generate the main text within the screenshot, which can be regarded as the heading of the webpage.
+  
+  You should directly tell me the main content, and do not output any explanation or any other contents.
+action_prediction_prompt: |
+  You are given a screenshot of a webpage with a red rectangle bounding box. The [x1, y1, x2, y2] coordinates of the bounding box is {bbox_ratio}.
+  Please select the best webpage description that matches the new webpage after clicking the selected element in the bounding box:
+  {choices_text}
+
+  You should directly tell me your choice in a single uppercase letter, and do not output any explanation or any other contents.
+element_ground_prompt: |
+  In this website screenshot, I have labeled IDs for some HTML elements as candicates. Tell me which one best matches the description: {element_desc}
+
+  You should directly tell me your choice in a single uppercase letter, and do not output any explanation or any other contents.
+element_ground_bbox_prompt: |
+  In this UI screenshot, please provide the bounding box coordinate of the region of the HTML element with the following text: 
+  {element_desc}
+element_ocr_prompt: |
+  You are given a screenshot of a webpage with a red rectangle bounding box. The [x1, y1, x2, y2] coordinates of the bounding box is {bbox_ratio}.
+  Please perform OCR on the bounding box and recognize the text content within the red bounding box.
+
+  You should use the following format:
+  The text content within the red bounding box is: <YOUR ANSWER>
+action_ground_bbox_prompt: |
+  Within the provided UI screenshot, please pinpoint the precise bounding box coordinates of the HTML element's region that I should click in order to complete the following task:
+  {instruction}
