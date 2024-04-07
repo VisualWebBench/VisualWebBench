@@ -27,6 +27,9 @@ The proposed WebBench possesses the following features:
 We provide evaluation code for GPT-4V, Claude, Gemini, and LLaVA 1.6 series.
 See `run.sh` for more details.
 
+The experimental results are as follows:
+![Alt text](assets/exp.png)
+
 ## How to Add a Model
 1. Implement a model adapter in `model_adapters`. See `model_adapters/llava_adapter.py` for an example.
 2. Modify `run.py` to add your model.
