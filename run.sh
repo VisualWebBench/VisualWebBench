@@ -1,5 +1,5 @@
-model_name=openai
-task_type=web_caption,head_ocr,webqa,element_ocr,action_prediction,element_ground,action_ground
+model_name=llava_7b
+task_type=web_caption,webqa,heading_ocr,element_ocr,element_ground,action_prediction,action_ground
 
 python $DEBUG_MODE run.py \
     --model_name $model_name \

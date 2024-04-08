@@ -1,5 +1,5 @@
 CAPTION_TASK = "web_caption"
-HEAD_OCR_TASK = "head_ocr"
+HEADING_OCR_TASK = "heading_ocr"
 WEBQA_TASK = "webqa"
 ELEMENT_OCR_TASK = "element_ocr"
 ACTION_PREDICTION_TASK = "action_prediction"

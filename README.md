@@ -22,7 +22,10 @@ The proposed VisualWebBench possesses the following features:
 - **High quality**: Quality is ensured through careful human verification and curation efforts.
 ![Alt text](assets/detail.png)
 
+
+
 ## Evaluation
+
 
 We provide evaluation code for GPT-4V, Claude, Gemini, and LLaVA 1.6 series.
 See `run.sh` for more details.

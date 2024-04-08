@@ -1,8 +1,7 @@
-from .data_utils import load_dataset
 from .prompts import DEFAULT_PROMPTS
 from .eval_utils import (
     eval_web_caption,
-    eval_head_ocr,
+    eval_heading_ocr,
     eval_element_ocr,
     eval_action_prediction,
     eval_element_ground,

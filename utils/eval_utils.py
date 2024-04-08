@@ -1,8 +1,4 @@
-import os
 import re
-import json
-import random
-from tqdm import tqdm
 
 import numpy as np
 from rouge import Rouge 
@@ -26,7 +22,7 @@ def eval_web_caption(preds, golds, **kwargs):
     )
 
 
-def eval_head_ocr(preds, golds, **kwargs):
+def eval_heading_ocr(preds, golds, **kwargs):
     assert len(preds) == len(golds)
     for i in range(len(preds)):
         if not preds[i]:

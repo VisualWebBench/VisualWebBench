@@ -15,7 +15,7 @@ import model_adapters
 from utils import DEFAULT_PROMPTS
 from utils import (
     eval_web_caption,
-    eval_head_ocr,
+    eval_heading_ocr,
     eval_element_ocr,
     eval_action_prediction,
     eval_element_ground,
@@ -27,22 +27,12 @@ from utils.constants import *
 
 eval_metric = {
     CAPTION_TASK: eval_web_caption,
-    HEAD_OCR_TASK: eval_head_ocr,
-    WEBQA_TASK:eval_webqa,
+    HEADING_OCR_TASK: eval_heading_ocr,
+    WEBQA_TASK: eval_webqa,
     ELEMENT_OCR_TASK: eval_element_ocr,
     ELEMENT_GROUND_TASK: eval_element_ground,
     ACTION_PREDICTION_TASK: eval_action_prediction,
     ACTION_GROUND_TASK: eval_action_ground,
-}
-
-type2path = {
-    CAPTION_TASK: 'meta_generate',
-    HEAD_OCR_TASK: 'title_identification',
-    WEBQA_TASK: "webqa",
-    ELEMENT_OCR_TASK: "long_text_OCR",
-    ELEMENT_GROUND_TASK: "element_ground",
-    ACTION_PREDICTION_TASK: "action_prediction",
-    ACTION_GROUND_TASK: "action_grounding",
 }
 
 
@@ -60,7 +50,7 @@ def evaluate(
     for idx_ in tqdm(range(data_size), desc=task_type):
         sample = dataset[idx_]
         
-        if task_type in [CAPTION_TASK, HEAD_OCR_TASK]:
+        if task_type in [CAPTION_TASK, HEADING_OCR_TASK]:
             cur_prompt = prompt
         elif task_type == WEBQA_TASK:
             cur_prompt = prompt.format(question=sample['question'])
@@ -149,7 +139,6 @@ def main(args):
         task_types = [args.task_type]
 
     for task_type in task_types:
-            # with model
         print(model_config.keys())
         prompt = model_config.get(f"{task_type}_prompt", DEFAULT_PROMPTS[f"{task_type}_prompt"])
         
@@ -190,13 +179,9 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '--task_type',
-        default='meta_generate',
+        default='web_caption',
         type=str,
-    )
-    parser.add_argument(
-        '--cot',
-        default=False,
-        action='store_true'
+        help="Task type can be one of web_caption, heading_ocr, element_ocr, action_prediction, element_ground, action_ground, webqa. Or several tasks separated by comma.",
     )
     parser.add_argument(
         '--output_path', 
@@ -208,11 +193,6 @@ if __name__ == '__main__':
         default="0",
         type=str,
         help="A single GPU like 1 or multiple GPUs like 0,2",
-    )
-    parser.add_argument(
-        "--debug",
-        action="store_true",
-        help="Whether to run in debug mode (10 ex per task).",
     )
     args = parser.parse_args()
 
