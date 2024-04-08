@@ -1,4 +1,4 @@
-model_path: /ML-A800/models/llava-v1.6-vicuna-7b
+model_path: liuhaotian/llava-v1.6-vicuna-7b
 model_adapter: LlavaAdapter
 temperature: 0.0
 conv_mode: llava_v1
