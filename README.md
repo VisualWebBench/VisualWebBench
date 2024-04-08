@@ -1,23 +1,23 @@
 # WebBench
 
-This repo contains the evaluation framework for the paper: [WebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding?](https://arxiv.org)
+This repo contains the evaluation framework for the paper: [VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding?](https://arxiv.org)
 
-[**🌐 Homepage**](https://webbench-mllm.github.io/) | [**🤗 Dataset**](https://huggingface.co/datasets/webbench/WebBench) | [**📖 arXiv**](https://arxiv.org)
+[**🌐 Homepage**](https://visualwebbench.github.io/) | [**🤗 Dataset**](https://huggingface.co/datasets/visualwebbench/VisualWebBench) | [**📖 arXiv**](https://arxiv.org)
 
 
 ## Introduction
 
-We introduce **WebBench**, a multimodal benchmark designed to assess the **understanding and grounding capabilities of MLLMs in web scenarios**. WebBench consists of **seven tasks**, and comprises **1.5K** human-curated instances from **139** real websites, covering 87 sub-domains. We evaluate 14 open-source MLLMs, Gemini Pro, Claude 3, and GPT-4V(ision) on WebBench, revealing significant challenges and performance gaps. Further analysis highlights the limitations of current MLLMs, including inadequate grounding in text-rich environments and subpar performance with low-resolution image inputs. We believe WebBench will serve as a valuable resource for the research community and contribute to the creation of more powerful and versatile MLLMs for web-related applications.
+We introduce **VisualWebBench**, a multimodal benchmark designed to assess the **understanding and grounding capabilities of MLLMs in web scenarios**. VisualWebBench consists of **seven tasks**, and comprises **1.5K** human-curated instances from **139** real websites, covering 87 sub-domains. We evaluate 14 open-source MLLMs, Gemini Pro, Claude 3, and GPT-4V(ision) on WebBench, revealing significant challenges and performance gaps. Further analysis highlights the limitations of current MLLMs, including inadequate grounding in text-rich environments and subpar performance with low-resolution image inputs. We believe VisualWebBench will serve as a valuable resource for the research community and contribute to the creation of more powerful and versatile MLLMs for web-related applications.
 
 ![Alt text](assets/main.png)
 
 
 ## Benchmark Construction
-We introduce WebBench, a comprehensive multimodal benchmark designed to assess the capabilities of MLLMs in the web domain. Inspired by the human interaction process with web browsers, WebBench consists of seven tasks that map to core abilities required for web tasks: captioning, webpage QA, heading OCR, element OCR, element grounding, action prediction, and action grounding, as detailed in the figure. The benchmark comprises 1.5K instances, all uniformly formulated in the QA style, making it easy to evaluate and compare the performance of different MLLMs.
+We introduce VisualWebBench, a comprehensive multimodal benchmark designed to assess the capabilities of MLLMs in the web domain. Inspired by the human interaction process with web browsers, VisualWebBench consists of seven tasks that map to core abilities required for web tasks: captioning, webpage QA, heading OCR, element OCR, element grounding, action prediction, and action grounding, as detailed in the figure. The benchmark comprises 1.5K instances, all uniformly formulated in the QA style, making it easy to evaluate and compare the performance of different MLLMs.
 ![Alt text](assets/compare.png)
-The proposed WebBench possesses the following features:
-- **Comprehensiveness**: WebBench spans 139 websites with 1.5K samples, encompassing 12 different domains (e.g., travel, sports, hobby, lifestyle, animals, science, etc.) and 87 sub-domains.
-- **Multi-granularity**: WebBench assesses MLLMs at three levels: website-level, element-level, and action-level.
+The proposed VisualWebBench possesses the following features:
+- **Comprehensiveness**: VisualWebBench spans 139 websites with 1.5K samples, encompassing 12 different domains (e.g., travel, sports, hobby, lifestyle, animals, science, etc.) and 87 sub-domains.
+- **Multi-granularity**: VisualWebBench assesses MLLMs at three levels: website-level, element-level, and action-level.
 - **Multi-tasks**: WebBench encompasses seven tasks designed to evaluate the understanding, OCR, grounding, and reasoning capabilities of MLLMs.
 - **High quality**: Quality is ensured through careful human verification and curation efforts.
 ![Alt text](assets/detail.png)
@@ -45,7 +45,7 @@ If you find this work helpful, please cite out paper:
 ```
 @article{liu2024webbench,
     author={Junpeng Liu and Yifan Song and Bill Yuchen Lin and Wai Lam and Graham Neubig and Yuanzhi Li and Xiang Yue},
-    title={WebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding?},
+    title={VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding?},
     year={2024},
     eprint={2404.99999},
     archivePrefix={arXiv},
