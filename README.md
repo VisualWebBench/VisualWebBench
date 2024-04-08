@@ -1,4 +1,4 @@
-# WebBench
+# VisualWebBench
 
 This repo contains the evaluation framework for the paper: [VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding?](https://arxiv.org)
 
