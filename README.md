@@ -1,8 +1,8 @@
 # VisualWebBench
 
-This repo contains the evaluation framework for the paper: [VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding?](https://arxiv.org)
+This repo contains the evaluation framework for the paper: [VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding?](https://arxiv.org/abs/2404.05955)
 
-[**🌐 Homepage**](https://visualwebbench.github.io/) | [**🤗 Dataset**](https://huggingface.co/datasets/visualwebbench/VisualWebBench) | [**📖 arXiv**](https://arxiv.org)
+[**🌐 Homepage**](https://visualwebbench.github.io/) | [**🤗 Dataset**](https://huggingface.co/datasets/visualwebbench/VisualWebBench) | [**📖 arXiv**](https://arxiv.org/abs/2404.05955)
 
 
 ## Introduction
@@ -46,12 +46,12 @@ The experimental results are as follows:
 ## Citation
 If you find this work helpful, please cite out paper:
 ```
-@article{liu2024webbench,
-    author={Junpeng Liu and Yifan Song and Bill Yuchen Lin and Wai Lam and Graham Neubig and Yuanzhi Li and Xiang Yue},
-    title={VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding?},
-    year={2024},
-    eprint={2404.99999},
-    archivePrefix={arXiv},
-    primaryClass={cs.CL}
+@misc{liu2024visualwebbench,
+      title={VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding?}, 
+      author={Junpeng Liu and Yifan Song and Bill Yuchen Lin and Wai Lam and Graham Neubig and Yuanzhi Li and Xiang Yue},
+      year={2024},
+      eprint={2404.05955},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
 }
 ```
