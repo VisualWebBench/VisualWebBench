@@ -11,6 +11,9 @@ We introduce **VisualWebBench**, a multimodal benchmark designed to assess the *
 
 ![Alt text](assets/main.png)
 
+## Update
+* [2024/4/17]: Update results of Gemini 1.5 Pro
+
 
 ## Benchmark Construction
 We introduce VisualWebBench, a comprehensive multimodal benchmark designed to assess the capabilities of MLLMs in the web domain. Inspired by the human interaction process with web browsers, VisualWebBench consists of seven tasks that map to core abilities required for web tasks: captioning, webpage QA, heading OCR, element OCR, element grounding, action prediction, and action grounding, as detailed in the figure. The benchmark comprises 1.5K instances, all uniformly formulated in the QA style, making it easy to evaluate and compare the performance of different MLLMs.
