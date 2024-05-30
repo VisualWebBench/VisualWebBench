@@ -160,7 +160,7 @@ def main(args):
             } for pred, gold in zip(preds, golds)
         ]
         output_res = [{"score": score_str}] + output_res
-        with open(os.path.join(args.output_path, f"{task_type}{'_cot' if args.cot else ''}.json"), "w") as f:
+        with open(os.path.join(args.output_path, f"{task_type}.json"), "w") as f:
             json.dump(output_res, f, indent=2)
 
 
